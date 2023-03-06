@@ -411,8 +411,13 @@ string text similar to the [Routes](#routes) table
 </td>
 <td>
 
-` 'Data has been converted to USCS units!' `
-
+```json
+{
+  "message": "Data has been converted to USCS units!",
+  "success": true
+}
+```
+  
 </td>
 </tr>
 
