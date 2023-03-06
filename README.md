@@ -86,7 +86,7 @@ First, ensure you have Docker installed on your local machine. To run the app yo
     
         docker run -it --rm -p 5000:5000 kelach/iss_api:1.0
         
-      - Incase you're new to running Docker images:
+      - Incase you're new to running Docker containers:
           - `-it` : Allows you to interact in your container using your terminal
           - `--rm` : removes the container after exiting the Flask application
           - `-p` : Binds port 5000 on the container to the port 5000 on your local/remote computer (so you can communicate with the flask program!)
