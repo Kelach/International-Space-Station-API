@@ -424,7 +424,12 @@ string text similar to the [Routes](#routes) table
 </td>
 <td>
 
-` 'Data deleted!' `
+```json
+{
+  "message": "Data deleted!",
+  "success": true
+}
+```
 
 </td>
 </tr>
@@ -436,7 +441,12 @@ string text similar to the [Routes](#routes) table
 </td>
 <td>
 
-` 'Data Restored!' `
+```json
+{
+  "message": "Data restored!",
+  "success": true
+}
+```
 
 </td>
 </tr>
