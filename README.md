@@ -42,12 +42,8 @@ If you're wondering "what's the difference?" Here's a small description for each
 - **via Git Clone**:
     - This method is also helpful if you'd like to modify the source code, but without using Docker to run the application. However, system differences between my computer and yours may prevent this application from running as intended on your local computer.
     
-**NOTE**: You'll need a reliable network connection to proceed with any of the three installation methods!
+**NOTE**: You'll need a reliable network connection and Python3 installed to proceed with any of the three installation methods! (see this application was built using Python 3.8).
 
-
-
-
-You can now run this application using Docker! To do so, make sure you have the latest version of Docker install on your Laptop/PC.
 
 ## Install/Run via the Docker Hub
 First, ensure you have Docker installed on your local machine. To run the app you will need to follow these steps:
@@ -82,9 +78,16 @@ First, ensure you have Docker installed on your local machine. To run the app yo
       
  3. Next, build the Docker image you just pulled by running this command:
     
-    **Note**: Running the command below will start the Flask application automatically
-    
         docker build -t kelach/iss_api:1.0 .
+
+4. Now, you can run a container of the image with the following command:
+    
+        docker run -it --rm -p 5000:5000 kelach/iss_api:1.0
+        
+      - Incase you're new to running Docker images:
+          - `-it` : Allows you to interact in your container using your terminal
+          - `--rm` : removes the container after exiting the Flask application
+          - `-p` : Binds port 5000 on the container to the port 5000 on your local/remote computer (so you can communicate with the flask program!)
   
   4. Now that the Flask application is running you can navigate to http://localhost:5000/ in your web browser to access the data and you're all set! See [Routes](#routes) for the supported routes.
    
