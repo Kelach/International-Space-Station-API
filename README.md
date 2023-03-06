@@ -14,9 +14,9 @@ Easily query and modify information on the whereabouts of the [International Spa
   
   After the additional information, ISS state vectors in the **Mean of J2000 (J2K) reference frame** are listed at four-minute intervals spanning a total length of 15 days. 
     
-    - In case you're wondering, ISS state vectors in the Mean of J2000 (J2K) reference frame basically means the positional and velocity values calculated for the ISS are relative to the Earth's equator and equinox.  
+    - In case you're wondering, having ISS state vectors in the Mean of J2000 (J2K) reference frame essentially means the positional and velocity values calculated for the ISS are relative to the Earth's equator and equinox.  
   
-  Each state vector includes an epoch (time in Coordinated Universal Time), position vectors X, Y, and Z (km), and velocity vectors X_Dot, Y_Dot, and Z_Dot (km/s).
+  Each state vector includes an epoch (time in Universal Coordinated Time), position vectors X, Y, and Z (km), and velocity vectors X_Dot, Y_Dot, and Z_Dot (km/s).
     - Note: You can switch to USCS units (mi/s) if you wish to instead. (see [routes](#routes) for more info)
 
 
@@ -28,11 +28,11 @@ Easily query and modify information on the whereabouts of the [International Spa
 ## Installation 
 To get a copy of the project up and running on your local machine, you have three options:
 
-- [Install/Run via the Docker Hub](install/run-via-the-docker-hub)
+- [Install/Run via the Docker Hub](#installrun-via-the-docker-hub)
 
-- [Install/Run via the Dockerfile](install/run-via-the-dockerfile)
+- [Install/Run via the Dockerfile](#installrun-via-the-dockerfile)
 
-- [Install/Run via Git clone](install/run-via-git-clone)
+- [Install/Run via Git clone](#installrun-via-git-clone)
 
 If you're wondering "what's the difference?" Here's a small description for each installation option:
 
@@ -94,7 +94,7 @@ First, ensure you have Docker installed on your local machine. To run the app yo
   4. Now that the Flask application is running you can navigate to http://localhost:5000/ in your web browser to access the data and you're all set! See [Routes](#routes) for the supported routes.
    
 ## Install/Run via Git Clone 
-To run the app, you will need to follow these steps:
+Ensure that you have python 3.8.10+ installed on your local computer. To run the app, you will need to follow these steps:
 
 1. Clone this repository to your local machine by running:
 
