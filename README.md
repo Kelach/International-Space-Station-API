@@ -2,7 +2,7 @@
 
 ## Project Objective
 
-Easily query and modify information on the whereabouts of the [International Space Station](https://en.wikipedia.org/wiki/International_Space_Station) using this Flask application. This Flask application supports querying positional, velocity, and locational data about the ISS. ISS API serves as an intermediary between the [ISS Trajectory Data Webiste](https://spotthestation.nasa.gov/trajectory_data.cfm) and the end user. The ISS trajectory data set contains an abundance of measuring data about the ISS, and it can be challenging to sift through the data manually to find what you are looking for. With this application, you can easily query and parse information regarding the trajectory of the ISS.
+Easily query and modify information on the whereabouts of the [International Space Station](https://en.wikipedia.org/wiki/International_Space_Station) using the International Space Station Web API! This Flask application supports querying positional, velocity, and locational data about the ISS. ISS API serves as an intermediary between the [ISS Trajectory Data Webiste](https://spotthestation.nasa.gov/trajectory_data.cfm) and the end user. The ISS trajectory data set contains an abundance of measuring data about the ISS, and it can be challenging to sift through the data manually to find what you are looking for. With this application, you can easily query and parse information regarding the trajectory of the ISS.
 
 ## Data Set
 
@@ -12,7 +12,9 @@ Easily query and modify information on the whereabouts of the [International Spa
 - ### Description
   The data set includes a header, metadata, and comments which include additional information about the ISS like its mass (kg) and drag coefficient (m^2). 
   
-  After the header, ISS state vectors, in the **Mean of J2000 (J2K) reference frame** are listed at four-minute intervals spanning a total length of 15 days. In case you're wondering, ISS state vectors in the Mean of J2000 (J2K) reference frame basically means the positional and velocity values calculated for the ISS are relative to the Earth's equator and equinox.  
+  After the additional information, ISS state vectors in the **Mean of J2000 (J2K) reference frame** are listed at four-minute intervals spanning a total length of 15 days. 
+    
+    - In case you're wondering, ISS state vectors in the Mean of J2000 (J2K) reference frame basically means the positional and velocity values calculated for the ISS are relative to the Earth's equator and equinox.  
   
   Each state vector includes an epoch (time in Coordinated Universal Time), position vectors X, Y, and Z (km), and velocity vectors X_Dot, Y_Dot, and Z_Dot (km/s).
     - Note: You can switch to USCS units (mi/s) if you wish to instead. (see [routes](#routes) for more info)
