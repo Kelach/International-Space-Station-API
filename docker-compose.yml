@@ -1,0 +1,11 @@
+---
+version: "3"
+
+services:
+  flask-app:
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+    image: kelach/iss_api:1.0
+    ports:
+      - "5000:5000"
