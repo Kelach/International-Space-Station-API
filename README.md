@@ -39,7 +39,7 @@ If you're wondering "what's the difference?" Here's a small description for each
 - **via the Docker Hub**: 
     - Easiest installation method, but you'll need Docker installed on your local machine.([install Docker here](https://docs.docker.com/get-docker/))
 - **via the Dockerfile**: 
-    - Helpful if you'd rather build the Docker image locally instead of pulling it from the Docker Hub. (not reccommended if you'd like to maintain the latests image for this application). You'll also still need Docker installed.
+    - Helpful if you'd rather build the Docker image locally instead of pulling it from the Docker Hub. (not reccommended if you'd like to maintain the latest Docker image for this application). You'll also still need Docker installed.
     - Also, building the Docker image for this application yourself gives you the freedom to modify the source code of the [iss_tracker.py](./iss_tracker.py) script and even the Docker image itself!
 - **via Git Clone**:
     - This method is also helpful if you'd like to modify the source code, but without using Docker to run the application. However, system differences between my computer and yours may prevent this application from running as intended on your local computer.
