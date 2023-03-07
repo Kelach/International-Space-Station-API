@@ -2,7 +2,7 @@
 
 ## Project Objective
 
-Easily query and modify information on the whereabouts of the [International Space Station](https://en.wikipedia.org/wiki/International_Space_Station) using the International Space Station Web API! This Flask application supports querying positional, velocity, and locational data about the ISS. ISS API serves as an intermediary between the [ISS Trajectory Data Webiste](https://spotthestation.nasa.gov/trajectory_data.cfm) and the end user. The ISS trajectory data set contains an abundance of measuring data about the ISS, and it can be challenging to sift through the data manually to find what you are looking for. With this application, you can easily query and parse information regarding the trajectory of the ISS.
+Easily query and modify information on the whereabouts of the [International Space Station](https://en.wikipedia.org/wiki/International_Space_Station) using the International Space Station Web API! This Flask application supports querying positional, velocity, and locational data about the ISS. The ISS API serves as an intermediary between the [ISS Trajectory Data Webiste](https://spotthestation.nasa.gov/trajectory_data.cfm) and the end user. The ISS trajectory data set contains an abundance of measuring data about the ISS, and it can be challenging to sift through the data manually to find what you are looking for. With this application, you can easily query and parse information regarding the trajectory of the ISS.
 
 ## Data Set
 
@@ -16,7 +16,7 @@ Easily query and modify information on the whereabouts of the [International Spa
     
     - In case you're wondering, having ISS state vectors in the Mean of J2000 (J2K) reference frame essentially means the positional and velocity values calculated for the ISS are relative to the Earth's equator and equinox.  
   
-  Each state vector includes an epoch (time in Universal Coordinated Time), position vectors X, Y, and Z (km), and velocity vectors X_Dot, Y_Dot, and Z_Dot (km/s).
+  Each state vector includes an epoch (time in Coordinated Universal Time), position vectors X, Y, and Z (km), and velocity vectors X_Dot, Y_Dot, and Z_Dot (km/s).
     - Note: You can switch to USCS units (mi/s) if you wish to instead. (see [routes](#routes) for more info)
 
 
@@ -39,7 +39,7 @@ If you're wondering "what's the difference?" Here's a small description for each
 - **via the Docker Hub**: 
     - Easiest installation method, but you'll need Docker installed on your local machine.([install Docker here](https://docs.docker.com/get-docker/))
 - **via the Dockerfile**: 
-    - Helpful if you'd rather build the Docker image locally instead of pulling it from the Docker Hub. (not reccommended if you'd like to maintain the latests image for this application). You'll also still need Docker installed.
+    - Helpful if you'd rather build the Docker image locally instead of pulling it from the Docker Hub. (not reccommended if you'd like to maintain the latest Docker image for this application). You'll also still need Docker installed.
     - Also, building the Docker image for this application yourself gives you the freedom to modify the source code of the [iss_tracker.py](./iss_tracker.py) script and even the Docker image itself!
 - **via Git Clone**:
     - This method is also helpful if you'd like to modify the source code, but without using Docker to run the application. However, system differences between my computer and yours may prevent this application from running as intended on your local computer.
@@ -121,7 +121,7 @@ Ensure that you have python 3.8.10+ installed on your local computer. To run the
   | `/comment` | `GET` | Returns comments from the ISS trajectory data source file |
   | `/header` | `GET` | Returns header information from the ISS trajectory data source file |
   | `/metadata` | `GET` | Returns metadata from the ISS trajectory data source file |
-  | `/now` | `GET` | Returns latitude, longitude, altidue, and geoposition of the ISS for an epoch that is nearest in time |
+  | `/now` | `GET` | Returns latitude, longitude, altitude, and geoposition of the ISS for an epoch that is nearest in time |
   | `/epochs` | `GET` | All Epochs in the data set (list of strings) <br><em> - Includes optional parameters "limit" (positive int) to truncate results and "offset" (positive int) to change the starting position at which the data is returned</em></br> See [examples](#example-queries-and-results) below |
   | `/epochs/<epoch>` | `GET` | State vectors for a specific Epoch from the data set (list of one dictionary) <br> <b> &lt;epoch&gt; </b> Takes string inputs only.</br> See [examples](#example-queries-and-results) below |
   | `/epochs/<epoch>/location` | `GET` | Returns latitude, longitude, altitude, and geoposition of the ISS for a given epoch |
@@ -402,8 +402,13 @@ string text similar to the [Routes](#routes) table
 </td>
 <td>
 
-` 'Data has been converted to USCS units!' `
-
+```json
+{
+  "message": "Data has been converted to USCS units!",
+  "success": true
+}
+```
+  
 </td>
 </tr>
 
