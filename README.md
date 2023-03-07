@@ -130,7 +130,7 @@ Ensure that you have python 3.8.10+ installed on your local computer. To run the
   | `/comment` | `GET` | Returns comments from the ISS trajectory data source file |
   | `/header` | `GET` | Returns header information from the ISS trajectory data source file |
   | `/metadata` | `GET` | Returns metadata from the ISS trajectory data source file |
-  | `/now` | `GET` | Returns latitude, longitude, altidue, and geoposition of the ISS for an epoch that is nearest in time |
+  | `/now` | `GET` | Returns latitude, longitude, altitude, and geoposition of the ISS for an epoch that is nearest in time |
   | `/epochs` | `GET` | All Epochs in the data set (list of strings) <br><em> - Includes optional parameters "limit" (positive int) to truncate results and "offset" (positive int) to change the starting position at which the data is returned</em></br> See [examples](#example-queries-and-results) below |
   | `/epochs/<epoch>` | `GET` | State vectors for a specific Epoch from the data set (list of one dictionary) <br> <b> &lt;epoch&gt; </b> Takes string inputs only.</br> See [examples](#example-queries-and-results) below |
   | `/epochs/<epoch>/location` | `GET` | Returns latitude, longitude, altitude, and geoposition of the ISS for a given epoch |
