@@ -16,7 +16,7 @@ Easily query and modify information on the whereabouts of the [International Spa
     
     - In case you're wondering, having ISS state vectors in the Mean of J2000 (J2K) reference frame essentially means the positional and velocity values calculated for the ISS are relative to the Earth's equator and equinox.  
   
-  Each state vector includes an epoch (time in Universal Coordinated Time), position vectors X, Y, and Z (km), and velocity vectors X_Dot, Y_Dot, and Z_Dot (km/s).
+  Each state vector includes an epoch (time in Coordinated Universal Time), position vectors X, Y, and Z (km), and velocity vectors X_Dot, Y_Dot, and Z_Dot (km/s).
     - Note: You can switch to USCS units (mi/s) if you wish to instead. (see [routes](#routes) for more info)
 
 
