@@ -103,7 +103,7 @@ Ensure that you have python 3.8.10+ installed on your local computer. To run the
 
 4. Next, Start the Flask server by running: 
 
-        flask --app iss_tracker   
+        flask --app iss_tracker run
 
     - If you'd like to run this application in debug mode you can run this command to start the flask app instead:
         
