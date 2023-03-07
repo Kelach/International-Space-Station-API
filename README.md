@@ -78,25 +78,16 @@ First, ensure you have Docker installed on your local machine. To run the app yo
           
     - Where you replace "/path/to/International-Space-Station-API/" with the path to this directory.
       
- 3. Next, build the Docker image you just pulled by running this command:
-    
-        docker build -t kelach/iss_api:1.0 .
+ 3. Building and running the Docker image has been automated with Docker Compose. To build and run the application type the following in your terminal:
 
-4. Now, you can run a container of the image with the following command:
-    
-        docker run -it --rm -p 5000:5000 kelach/iss_api:1.0
-        
-      - Incase you're new to running Docker images:
-          - `-it` : Allows you to interact in your container using your terminal
-          - `--rm` : removes the container after exiting the Flask application
-          - `-p` : Binds port 5000 on the container to the port 5000 on your local/remote computer (so you can communicate with the flask program!)
+        docker-compose up --build flask-app
   
-  4. Now that the Flask application is running you can navigate to http://localhost:5000/ in your web browser to access the data and you're all set! See [Routes](#routes) for the supported routes.
+  4. Now that the Flask application is running you can navigate to http://localhost:5000/ in your web browser to access the data and you're all set! See [Routes](#routes) for a list of the supported routes.
    
 ## Install/Run via Git Clone 
 Ensure that you have python 3.8.10+ installed on your local computer. To run the app, you will need to follow these steps:
 
-1. Clone this repository to your local machine by running:
+1. Clone this repository to your local machine  by running the following in your command terminal:
 
         git clone https://github.com/Kelach/coe-332-sp23.git
 
@@ -104,13 +95,13 @@ Ensure that you have python 3.8.10+ installed on your local computer. To run the
       
           cd /path/to/International-Space-Station-API
           
-    - Where you replace "/path/to/International-Space-Station-API/" with the path to this directory.
+    - Where you replace "/path/to/International-Space-Station-API/" with the path to this repository your cloned.
 
-3. To install to install the dependencies for this project, run this command in your terminal:
+3. Before running the Flask application locally you must first install the needed dependencies. To do so, run this command in your terminal:
         
         pip3 install -r requirements.txt
 
-3. Start the Flask server by running: 
+4. Next, Start the Flask server by running: 
 
         flask --app iss_tracker   
 
@@ -120,7 +111,7 @@ Ensure that you have python 3.8.10+ installed on your local computer. To run the
         flask --app iss_tracker --debug run 
         ```
 
-4. Lastly, Navigate to http://localhost:5000/ in your web browser to access the application and you're all set! See [Routes](#routes) for the supported routes.
+5. Lastly, Navigate to http://localhost:5000/ in your web browser to access the application and you're all set! See [Routes](#routes) for the supported routes.
 
 ## Routes
   Here are the currently supported routes and query parameters:
