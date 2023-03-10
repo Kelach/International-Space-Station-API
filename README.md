@@ -54,14 +54,13 @@ First, ensure you have Docker installed on your local machine. To run the app yo
       
           docker pull kelach/iss_api:1.0
   
-  2. Now, you can run a container of the image with the following command:
+  2. Running the Docker image has been automated using Docker Compose. So, to run ISS API container, simply run this command
       
-          docker run -it --rm -p 5000:5000 kelach/iss_api:1.0
+          docker-compose up
+        
+        - To exit from the Docker container, you can simply run the following command (after exiting the ISS API program):
           
-        - Incase you're new to running Docker images:
-            - `-it` : Allows you to interact in your container using your terminal
-            - `--rm` : removes the container after exiting the Flask application
-            - `-p` : Binds port 5000 on the container to the port 5000 on your local/remote computer (so you can communicate with the flask program!)
+                docker-compose down
       
   3. Now that the Flask application is running you can navigate to http://localhost:5000/ in your web browser to access the data and you're all set! See [Routes](#routes) for the supported routes.
 
